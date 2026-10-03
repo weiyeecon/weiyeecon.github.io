@@ -1,0 +1,79 @@
+- id: safety-illusion
+  category: jmp
+  title: "The Safety Illusion: Stablecoin Trust Banks, Partial Federal Reserve Access, and Financial Stability"
+  authors: Wei Ye and Erick W. Rengifo
+  status: Revise and Resubmit · Journal of Financial Stability
+  abstract: We compare stablecoin risk under trust charters, limited payment access, banking-as-a-service arrangements, and full-service
+    banking. When liquidity requirements do not bind, stronger perceived protection induces issuers to replace cash with interest-bearing
+    reserves, increasing liquidation in an unsupported failure. Using 211 monthly reserve reports for five dollar stablecoins, combined
+    with daily circulation and FINRA Treasury trading data, we find that a 30 percent contraction in liabilities would exceed bank cash
+    in 63.2 percent of complete reserve portfolios.
+- id: balance-sheet
+  category: publication
+  title: Balance Sheet Decomposition of Crypto, Stablecoin, Central Bank Digital Currency and Tokenized Assets
+  authors: Wei Ye and Erick W. Rengifo
+  status: Journal of Financial Market Infrastructures, 13(3) · 2026
+- id: tokenized-rwa
+  category: working
+  title: Democratization or Illusion? Evaluating Tokenized Real-World Assets from a Retail Investor Perspective
+  authors: Wei Ye and Erick W. Rengifo
+  status: Revise and Resubmit · Journal of Financial Stability
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6609919
+  link_label: SSRN
+- id: atomic-settlement
+  category: working
+  title: Atomic Settlement and Coordination Fragility
+  authors: Wei Ye and Erick W. Rengifo
+  status: Revise and Resubmit · Finance Research Letters
+- id: cbdc-architecture
+  category: working
+  title: Designing Retail and Wholesale CBDC Architectures for Cross-Border Payments
+  authors: Wei Ye and Erick W. Rengifo
+  status: Working paper
+- id: structural-risk
+  category: working
+  title: A Structural Risk Assessment Framework for Banks under Cryptocurrencies and CBDC
+  authors: Wei Ye
+  status: Permanent working paper
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5311988
+  link_label: SSRN
+- id: agentic-mev
+  category: proceedings
+  title: "When AI Agents Meet MEV: Cross-Chain Arbitrage in the Agentic Economy"
+  authors: Wei Ye, Jingyan Xu, and Yuanhong Wu
+  status: Forthcoming · 7th International Conference on Mathematical Research for Blockchain Economy (MARBLE 2026)
+- id: bitcoin-prediction
+  category: proceedings
+  title: Bitcoin Price Prediction Using Machine Learning and Combinatorial Fusion Analysis
+  authors: Yuanhong Wu, Wei Ye, Jingyan Xu, and D. Frank Hsu
+  status: 2025 IEEE Conference on Artificial Intelligence (CAI)
+  url: https://ieeexplore.ieee.org/document/11050561/
+  link_label: IEEE
+- id: credit-approval
+  category: proceedings
+  title: A Model Fusion Approach for Enhancing Credit Approval Decision Making
+  authors: Yuanhong Wu, Jingyan Xu, Wei Ye, Christina Schweikert, and D. Frank Hsu
+  status: 2025 Artificial Intelligence for Business (AIxB)
+  url: https://ieeexplore.ieee.org/document/11500026
+  link_label: IEEE
+- id: layered-fragility
+  category: progress
+  title: "Layered Fragility: Bank Money and Composable Credit"
+  authors: Wei Ye
+  status: Work in progress
+- id: agentic-payment
+  category: progress
+  title: "Agentic Payment and Financial Stability: Correlated Demand, Stablecoin Off-Ramps, and Exchange Rate Volatility in Emerging
+    Markets"
+  authors: Wei Ye and Erick W. Rengifo
+  status: Work in progress
+- id: bank-charters
+  category: progress
+  title: Who Gets to Be a Bank? Digital Money, Regulatory Design, and the Remaking of Banking
+  authors: Wei Ye and Erick W. Rengifo
+  status: Work in progress · Law paper
+- id: consortium-governance
+  category: progress
+  title: "From Wildcat to Clearinghouse: Neutral Governance in Stablecoin Consortia"
+  authors: Wei Ye
+  status: Work in progress

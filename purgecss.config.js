@@ -4,6 +4,9 @@ module.exports = {
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
   safelist: [
+    // Mobile navigation adds these classes after page load.
+    "js",
+    "is-open",
     "collapse",
     "collapsing",
     "show",

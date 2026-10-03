@@ -1,0 +1,199 @@
+---
+layout: null
+title: About
+nav_id: about
+permalink: /
+description: Wei Ye is a Ph.D. candidate in Economics at Fordham University, researching stablecoins, CBDC, tokenized assets, and financial stability.
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.nav_id == 'about' %}Wei Ye | Economics · Fordham University{% else %}{{ page.title }} | Wei Ye{% endif %}</title>
+    <meta name="description" content="{{ page.description | escape }}" />
+    <meta name="author" content="Wei Ye" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wei Ye" />
+    <meta property="og:title" content="{{ page.title | escape }} | Wei Ye" />
+    <meta property="og:description" content="{{ page.description | escape }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ '/assets/img/headshot_compress.png' | absolute_url }}" />
+    <meta property="og:image:alt" content="Wei Ye, Ph.D. candidate in Economics at Fordham University" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Wei Ye",
+        "url": "https://weiyeecon.github.io/",
+        "image": "https://weiyeecon.github.io/assets/img/headshot_compress.png",
+        "jobTitle": "Ph.D. Candidate in Economics",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Fordham University" },
+        "email": "wei.ye@fordham.edu",
+        "sameAs": [
+          "https://scholar.google.com/citations?user=IiMFt7oAAAAJ&hl=en",
+          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101",
+          "https://github.com/weiyeecon"
+        ]
+      }
+    </script>
+    <script defer src="{{ '/assets/js/academic.js' | relative_url }}"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Wei Ye home">
+          <span class="brand-mark" aria-hidden="true">WY</span><span class="brand-name">Wei Ye</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}" aria-current="page">About</a>
+          <a href="{{ '/research/' | relative_url }}">Research</a>
+          <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+          <a href="{{ '/cv/' | relative_url }}">CV</a>
+          <a class="nav-contact" href="mailto:wei.ye@fordham.edu">Contact <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="wrap" tabindex="-1">
+      <section class="hero" aria-labelledby="profile-name">
+        <div>
+          <p class="eyebrow">Economics · Fordham University</p>
+          <h1 id="profile-name">Wei Ye</h1>
+          <p class="hero-role">Ph.D. Candidate in Economics</p>
+          <div class="hero-bio">
+            <p>
+              I study digital money and financial stability, with a focus on stablecoins, central bank digital currencies, and tokenized real-world
+              assets.
+            </p>
+            <p>
+              I am a Ph.D. candidate at <a href="https://www.fordham.edu/">Fordham University</a>, advised by
+              <a href="https://www.fordham.edu/academics/departments/economics/faculty/erick-w-rengifo/">Erick W. Rengifo</a>. My dissertation,
+              <em>Essays on the Future of Finance</em>, examines how new forms of money and financial infrastructure affect banking and risk.
+            </p>
+          </div>
+          <div class="actions">
+            <a class="button" href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="{{ '/assets/pdf/CV_academic.pdf' | relative_url }}">Download CV <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="external-links" aria-label="Academic profiles">
+            <a href="mailto:wei.ye@fordham.edu">Email</a>
+            <a href="https://scholar.google.com/citations?user=IiMFt7oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"
+              >Google Scholar <span aria-hidden="true">↗</span></a
+            >
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101" target="_blank" rel="noopener noreferrer"
+              >SSRN <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <p class="market-note"><span class="status-dot" aria-hidden="true"></span>2026–27 job market · Expected graduation: May 2027</p>
+        </div>
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <img
+              src="{{ '/assets/img/headshot_compress.png' | relative_url }}"
+              alt="Professional portrait of Wei Ye"
+              width="1407"
+              height="1759"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+          <figcaption><strong>Department of Economics</strong>Fordham University<br />New York, NY</figcaption>
+        </figure>
+      </section>
+      {% assign jmp = site.data.research | where: 'category', 'jmp' | first %}
+      <section class="featured-paper" aria-labelledby="jmp-title">
+        <div class="featured-label">
+          <p class="eyebrow">Job Market Paper</p>
+          <span>2026–27</span>
+        </div>
+        <div>
+          <h2 id="jmp-title"><a href="{{ '/research/#safety-illusion' | relative_url }}">{{ jmp.title }}</a></h2>
+          <p class="paper-authors">{{ jmp.authors }}</p>
+          <p class="paper-status">{{ jmp.status }}</p>
+          <a class="text-link" href="{{ '/research/#safety-illusion' | relative_url }}">Read the abstract <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section class="section home-grid" aria-label="Research highlights and recent activity">
+        <div>
+          <div class="section-heading">
+            <h2>Selected research</h2>
+            <a class="text-link" href="{{ '/research/' | relative_url }}">All papers <span aria-hidden="true">→</span></a>
+          </div>
+          {% for paper in site.data.research %} {% if paper.id == 'tokenized-rwa' or paper.id == 'atomic-settlement' or paper.id == 'balance-sheet' %}
+          <article class="compact-paper">
+            <h3><a href="{{ '/research/' | relative_url }}#{{ paper.id }}">{{ paper.title }}</a></h3>
+            <p class="paper-status">{{ paper.status }}</p>
+          </article>
+          {% endif %} {% endfor %}
+        </div>
+        <aside aria-labelledby="activity-title">
+          <div class="section-heading"><h2 id="activity-title">Recent &amp; upcoming</h2></div>
+          <ul class="updates">
+            <li>
+              <span class="update-date">November 2026 · Scheduled</span>Short-term research visit and presentation at the South African Reserve Bank;
+              presentation at the University of Pretoria.
+            </li>
+            <li><span class="update-date">August 2026</span>Presented at the China Economics Annual Conference Summer Forum in Dali.</li>
+            <li>
+              <span class="update-date">July 2026</span>Presented at the XLIV BCRP Annual Research Conference at the Central Reserve Bank of Peru.
+            </li>
+            <li><span class="update-date">May 2026</span>Presented at the 3rd ASEAN+3 Finance Think-Tank Network Seminar at ADBI in Tokyo.</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="section" aria-labelledby="education-title">
+        <p class="eyebrow">Academic background</p>
+        <h2 id="education-title">Education</h2>
+
+        <div class="education-grid">
+          <div class="education-item">
+            <h3>Fordham University</h3>
+            <p>Ph.D. in Economics</p>
+            <p class="date">2021–2027 (expected)</p>
+          </div>
+          <div class="education-item">
+            <h3>University of Wisconsin–Madison</h3>
+            <p>M.S. in Economics · Quantitative Track</p>
+            <p class="date">2019–2021</p>
+          </div>
+          <div class="education-item">
+            <h3>Liaoning University</h3>
+            <p>B.A. in Economics</p>
+            <p class="date">2015–2019</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">Get in touch</h2>
+          <p>
+            <a class="contact-email" href="mailto:wei.ye@fordham.edu">wei.ye@fordham.edu <span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+        <address class="contact-location">
+          Department of Economics · Fordham University<br />
+          Dealy Hall E545 · 441 East Fordham Road<br />
+          Bronx, NY 10458
+        </address>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© {{ 'now' | date: '%Y' }} Wei Ye · Content updated October 2, 2026</span>
+        <div class="footer-links">
+          <a href="https://scholar.google.com/citations?user=IiMFt7oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101" target="_blank" rel="noopener noreferrer">SSRN</a>
+          <a href="https://github.com/weiyeecon" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

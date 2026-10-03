@@ -1,0 +1,184 @@
+---
+layout: null
+title: Research
+nav_id: research
+permalink: /research/
+description: Research by Wei Ye on stablecoin trust banks, tokenized real-world assets, CBDC, atomic settlement, and financial stability.
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.nav_id == 'about' %}Wei Ye | Economics · Fordham University{% else %}{{ page.title }} | Wei Ye{% endif %}</title>
+    <meta name="description" content="{{ page.description | escape }}" />
+    <meta name="author" content="Wei Ye" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wei Ye" />
+    <meta property="og:title" content="{{ page.title | escape }} | Wei Ye" />
+    <meta property="og:description" content="{{ page.description | escape }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ '/assets/img/headshot_compress.png' | absolute_url }}" />
+    <meta property="og:image:alt" content="Wei Ye, Ph.D. candidate in Economics at Fordham University" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Wei Ye",
+        "url": "https://weiyeecon.github.io/",
+        "image": "https://weiyeecon.github.io/assets/img/headshot_compress.png",
+        "jobTitle": "Ph.D. Candidate in Economics",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Fordham University" },
+        "email": "wei.ye@fordham.edu",
+        "sameAs": [
+          "https://scholar.google.com/citations?user=IiMFt7oAAAAJ&hl=en",
+          "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101",
+          "https://github.com/weiyeecon"
+        ]
+      }
+    </script>
+    <script defer src="{{ '/assets/js/academic.js' | relative_url }}"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Wei Ye home">
+          <span class="brand-mark" aria-hidden="true">WY</span><span class="brand-name">Wei Ye</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}">About</a>
+          <a href="{{ '/research/' | relative_url }}" aria-current="page">Research</a>
+          <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+          <a href="{{ '/cv/' | relative_url }}">CV</a>
+          <a class="nav-contact" href="mailto:wei.ye@fordham.edu">Contact <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="wrap" tabindex="-1">
+      <header class="page-intro">
+        <p class="eyebrow">Research</p>
+        <h1>Digital money.<br />Banking. Financial stability.</h1>
+        <p>
+          My research examines stablecoin regulation, CBDC architectures, tokenized real-world assets, and the design of payment and settlement
+          infrastructure.
+        </p>
+      </header>
+      <nav class="section-nav" aria-label="Research sections">
+        <a href="#job-market-paper">Job market paper</a><a href="#publications">Publications</a><a href="#working-papers">Working papers</a
+        ><a href="#work-in-progress">Work in progress</a>
+      </nav>
+      <section class="research-section" id="job-market-paper" aria-labelledby="jmp-heading">
+        <h2 id="jmp-heading">Job market paper</h2>
+        {% assign jmp = site.data.research | where: 'category', 'jmp' | first %}
+        <article class="paper jmp" id="{{ jmp.id }}">
+          <h3>{{ jmp.title }}</h3>
+          <p class="paper-authors">{{ jmp.authors }}</p>
+          <p class="paper-status">{{ jmp.status }}</p>
+          <details class="abstract" open>
+            <summary>Abstract</summary>
+            <p>{{ jmp.abstract }}</p>
+          </details>
+        </article>
+      </section>
+      <section class="research-section" id="publications" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications</h2>
+        {% for paper in site.data.research %}{% if paper.category == 'publication' %}
+
+        <article class="paper" id="{{ paper.id }}">
+          <h3>{{ paper.title }}</h3>
+          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-status">{{ paper.status }}</p>
+          {% if paper.url %}
+          <div class="paper-links">
+            <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.link_label }} <span aria-hidden="true">↗</span></a>
+          </div>
+          {% endif %}
+        </article>
+
+        {% endif %}{% endfor %}
+        <details class="proceedings">
+          <summary>Conference proceedings</summary>
+          {% for paper in site.data.research %}{% if paper.category == 'proceedings' %}
+
+          <article class="paper" id="{{ paper.id }}">
+            <h3>{{ paper.title }}</h3>
+            <p class="paper-authors">{{ paper.authors }}</p>
+            <p class="paper-status">{{ paper.status }}</p>
+            {% if paper.url %}
+            <div class="paper-links">
+              <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.link_label }} <span aria-hidden="true">↗</span></a>
+            </div>
+            {% endif %}
+          </article>
+
+          {% endif %}{% endfor %}
+        </details>
+      </section>
+      <section class="research-section" id="working-papers" aria-labelledby="working-heading">
+        <h2 id="working-heading">Working papers</h2>
+        {% for paper in site.data.research %}{% if paper.category == 'working' %}
+
+        <article class="paper" id="{{ paper.id }}">
+          <h3>{{ paper.title }}</h3>
+          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-status">{{ paper.status }}</p>
+          {% if paper.url %}
+          <div class="paper-links">
+            <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.link_label }} <span aria-hidden="true">↗</span></a>
+          </div>
+          {% endif %}
+        </article>
+
+        {% endif %}{% endfor %}
+      </section>
+      <section class="research-section in-progress" id="work-in-progress" aria-labelledby="progress-heading">
+        <h2 id="progress-heading">Selected work in progress</h2>
+        {% for paper in site.data.research %}{% if paper.category == 'progress' %}
+
+        <article class="paper" id="{{ paper.id }}">
+          <h3>{{ paper.title }}</h3>
+          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-status">{{ paper.status }}</p>
+          {% if paper.url %}
+          <div class="paper-links">
+            <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.link_label }} <span aria-hidden="true">↗</span></a>
+          </div>
+          {% endif %}
+        </article>
+
+        {% endif %}{% endfor %}
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">Get in touch</h2>
+          <p>
+            <a class="contact-email" href="mailto:wei.ye@fordham.edu">wei.ye@fordham.edu <span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
+        <address class="contact-location">
+          Department of Economics · Fordham University<br />
+          Dealy Hall E545 · 441 East Fordham Road<br />
+          Bronx, NY 10458
+        </address>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© {{ 'now' | date: '%Y' }} Wei Ye · Content updated October 2, 2026</span>
+        <div class="footer-links">
+          <a href="https://scholar.google.com/citations?user=IiMFt7oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101" target="_blank" rel="noopener noreferrer">SSRN</a>
+          <a href="https://github.com/weiyeecon" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

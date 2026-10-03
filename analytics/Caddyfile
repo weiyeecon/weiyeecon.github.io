@@ -1,0 +1,8 @@
+{$ANALYTICS_DOMAIN} {
+    encode zstd gzip
+    request_body {
+        max_size 8KB
+    }
+    reverse_proxy app:8100
+    # Access logging is off; the statistics database stores no raw IPs.
+}

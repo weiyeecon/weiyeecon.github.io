@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>登录 · Wei Ye 私密统计</title>
+    <link rel="stylesheet" href="/static/dashboard.css" />
+    <script defer src="/static/login.js"></script>
+  </head>
+  <body class="login-page">
+    <main class="login-shell">
+      <div class="login-intro">
+        <a class="console-brand" href="https://weiyeecon.github.io/"
+          ><span class="brand-monogram">WY</span><span>Wei Ye<span class="brand-caption">ACADEMIC WEBSITE</span></span></a
+        >
+        <div>
+          <p class="eyebrow">YOUR PRIVATE ANALYTICS</p>
+          <h1>每一次关注，<br />都有迹可循。</h1>
+          <p>在这里查看学术主页的访问趋势、<br />研究关注与访客来源。</p>
+        </div>
+        <span class="intro-footnote">自建系统 · 数据保存在你的服务器</span>
+      </div>
+      <section class="login-form-panel" aria-labelledby="login-heading">
+        <span class="private-label"
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="5" y="10" width="14" height="11" rx="2" />
+            <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+          >私人后台</span
+        >
+        <h2 id="login-heading">欢迎回来</h2>
+        <p class="muted">输入管理员密码，查看你的访问统计。</p>
+        <form id="login-form">
+          <label for="password">管理员密码</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
+          <p id="login-error" class="form-error" role="alert"></p>
+          <button class="primary-button" id="login-button" type="submit">进入后台 <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="login-note">访问数据仅在登录后显示。<br />密码与统计记录均不存放在公开网页中。</p>
+      </section>
+    </main>
+  </body>
+</html>

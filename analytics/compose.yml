@@ -1,0 +1,52 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_PATH: /app/data/analytics.sqlite3
+      GEOIP_DATABASE: /app/data/country.mmdb
+    volumes:
+      - analytics_data:/app/data
+    networks:
+      stats:
+        ipv4_address: 172.30.0.3
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8100/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      ANALYTICS_DOMAIN: ${ANALYTICS_DOMAIN:?Set your stats domain in .env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      stats:
+        ipv4_address: 172.30.0.2
+    depends_on:
+      app:
+        condition: service_healthy
+networks:
+  stats:
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+volumes:
+  analytics_data:
+  caddy_data:
+  caddy_config:

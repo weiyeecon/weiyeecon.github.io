@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>访问概览 · Wei Ye 私密统计</title>
+    <link rel="stylesheet" href="/static/dashboard.css" />
+    <script defer src="/static/dashboard.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <a class="console-brand" href="/"
+          ><span class="brand-monogram">WY</span><span>Wei Ye<span class="brand-caption">PRIVATE ANALYTICS</span></span></a
+        >
+        <div class="sidebar-nav" aria-label="统计内容">
+          <p class="nav-caption">工作空间</p>
+          <a class="sidebar-link active" href="#overview"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" /></svg
+            >访问概览</a
+          >
+          <a class="sidebar-link" href="#audience"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <ellipse cx="12" cy="12" rx="4" ry="9" />
+              <path d="M3 12h18" /></svg
+            >访客与来源</a
+          >
+          <a class="sidebar-link" href="#content"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h5" /></svg>页面与研究</a
+          >
+          <a class="sidebar-link" href="#activity"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4" /></svg>最近访问</a
+          >
+        </div>
+        <div class="site-card">
+          <span class="status-dot"></span><strong>Academic homepage</strong><span>weiyeecon.github.io</span
+          ><a href="https://weiyeecon.github.io/" target="_blank" rel="noopener noreferrer">查看主页 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="sidebar-bottom">
+          <span class="private-label"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="5" y="10" width="14" height="11" rx="2" />
+              <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+            >仅登录后可见</span
+          ><button id="logout" class="text-button" type="button">退出登录 <span aria-hidden="true">↗</span></button>
+        </div>
+      </aside>
+      <main class="dashboard-main" id="overview">
+        <header class="page-heading">
+          <div>
+            <p class="eyebrow">WEI YE / WEBSITE ANALYTICS</p>
+            <h1>访问概览<span id="demo-badge" class="demo-badge" hidden>演示数据</span></h1>
+            <p class="muted">了解谁在关注你的学术主页。</p>
+          </div>
+          <div class="heading-status">
+            <span class="status-dot"></span><span id="today-label">正在读取数据</span><span id="updated-label" class="muted"></span>
+          </div>
+        </header>
+        <div class="toolbar">
+          <div class="range-group" role="group" aria-label="统计时段">
+            <button type="button" data-days="7" aria-pressed="false">近 7 天</button
+            ><button type="button" data-days="30" aria-pressed="true">近 30 天</button
+            ><button type="button" data-days="90" aria-pressed="false">近 90 天</button>
+          </div>
+          <span id="range-label" class="range-label"></span>
+          <div class="toolbar-actions">
+            <button id="refresh" class="secondary-button" type="button"><span aria-hidden="true">↻</span>刷新</button
+            ><button id="export" class="secondary-button" type="button"><span aria-hidden="true">↓</span>导出 CSV</button>
+          </div>
+        </div>
+        <p id="dashboard-error" class="notice error-notice" role="alert" hidden></p>
+        <p id="geo-notice" class="notice" hidden>国家数据库尚未安装，访问量照常统计；访客国家暂显示为未知。</p>
+        <section class="metric-grid" aria-label="主要指标">
+          <article class="metric">
+            <span class="metric-label">页面浏览量 <span aria-hidden="true">↗</span></span
+            ><strong id="metric-views">—</strong>
+            <p id="views-comparison">正在加载</p>
+          </article>
+          <article class="metric">
+            <span class="metric-label">访问次数 <span aria-hidden="true">◉</span></span
+            ><strong id="metric-visitors">—</strong>
+            <p>每日近似去重，跨日累计</p>
+          </article>
+          <article class="metric">
+            <span class="metric-label">访客国家 / 地区 <span aria-hidden="true">◎</span></span
+            ><strong id="metric-countries">—</strong>
+            <p>按访问 IP 的国家归属估算</p>
+          </article>
+          <article class="metric">
+            <span class="metric-label">CV 下载点击 <span aria-hidden="true">↓</span></span
+            ><strong id="metric-downloads">—</strong>
+            <p>记录主页和 CV 页的下载点击</p>
+          </article>
+        </section>
+        <section class="panel trend-panel" aria-labelledby="trend-heading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="trend-heading">访问趋势</h2>
+              <p>页面浏览量与每日去重访问</p>
+            </div>
+            <div class="chart-legend">
+              <span><i class="legend-view"></i>浏览量</span><span><i class="legend-visitor"></i>访问次数</span>
+            </div>
+          </div>
+          <div class="chart-container">
+            <svg id="trend-chart" viewBox="0 0 1000 245" role="img" aria-label="访问趋势图"></svg>
+            <div id="chart-tooltip" class="chart-tooltip" hidden></div>
+          </div>
+          <p id="chart-empty" class="empty-state" hidden>暂时还没有访问数据。网站接入后，真实访问会显示在这里。</p>
+        </section>
+        <div class="audience-grid" id="audience">
+          <section class="panel" aria-labelledby="country-heading">
+            <div class="panel-heading">
+              <div>
+                <h2 id="country-heading">访客来自哪里</h2>
+                <p>国家 / 地区分布 · 按浏览量</p>
+              </div>
+              <span class="panel-tag" id="country-total">—</span>
+            </div>
+            <div id="country-list" class="ranking-list"></div>
+            <p class="panel-footnote">国家为近似位置，不代表访客的身份或所属机构。</p>
+          </section>
+          <section class="panel" aria-labelledby="source-heading">
+            <div class="panel-heading">
+              <div>
+                <h2 id="source-heading">他们如何找到你</h2>
+                <p>访问来源</p>
+              </div>
+              <span class="panel-tag">按浏览量</span>
+            </div>
+            <div id="source-list" class="ranking-list"></div>
+            <p class="panel-footnote">直接访问也包含未提供来源信息的访问。</p>
+          </section>
+        </div>
+        <section class="panel content-panel" id="content" aria-labelledby="page-heading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="page-heading">最受关注的页面</h2>
+              <p>了解访客对研究、教学与个人经历的关注</p>
+            </div>
+            <span class="panel-tag">按浏览量</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">页面</th>
+                  <th scope="col">浏览量</th>
+                  <th scope="col">访问次数</th>
+                  <th scope="col">占比</th>
+                </tr>
+              </thead>
+              <tbody id="page-table"></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="panel activity-panel" id="activity" aria-labelledby="activity-heading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="activity-heading">最近访问</h2>
+              <p id="activity-caption">最近 12 条记录</p>
+            </div>
+            <span class="panel-tag">包括 CV 下载</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">时间</th>
+                  <th scope="col">国家 / 地区</th>
+                  <th scope="col">页面 / 事件</th>
+                  <th scope="col">来源</th>
+                </tr>
+              </thead>
+              <tbody id="activity-table"></tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="console-footer">
+          <span>Wei Ye · 自建统计后台 · 统计库不保存原始 IP</span>
+          <div>
+            <a id="exclude-browser" href="https://weiyeecon.github.io/#stats-exclude" target="_blank" rel="noopener noreferrer"
+              >忽略此浏览器的访问 ↗</a
+            ><a href="https://db-ip.com/" target="_blank" rel="noopener noreferrer">IP Geolocation by DB-IP</a>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

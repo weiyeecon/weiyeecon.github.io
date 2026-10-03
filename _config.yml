@@ -126,6 +126,10 @@ analytics:
   cloudflare: # your Cloudflare Web Analytics beacon token (32 hex characters)
 enable_simple_analytics: false # Simple Analytics identifies a site by its domain, so it has no ID to set above
 
+# Your own statistics server. Leave empty until the private backend is deployed.
+# Example: https://stats.your-domain.org (no passwords or API keys here).
+self_hosted_analytics_url: ""
+
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
@@ -228,6 +232,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - analytics/
   - assets/jupyter/
   - assets/rendercv/
   - assets/pdf/example_pdf.pdf

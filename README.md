@@ -14,6 +14,9 @@ Personal academic website for Wei Ye, Ph.D. Candidate in Economics at Fordham Un
 - `assets/img/headshot_compress.png`: professional portrait.
 - `assets/css/academic.css`: responsive visual design.
 - `assets/js/academic.js`: accessible mobile navigation.
+- `analytics/`: private, self-hosted visitor statistics service and dashboard. See [setup instructions](analytics/README.md).
+
+The custom statistics collector is disabled until `self_hosted_analytics_url` in `_config.yml` points to your own deployed server. No third-party analytics service is installed.
 
 The public pages use standalone HTML with Jekyll Liquid data rendering. The `/publications/` address remains available for older links and points search engines to `/research/` as its canonical URL. Starter examples are excluded in `_config.yml`.
 

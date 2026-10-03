@@ -316,6 +316,12 @@ p {
   display: inline-block;
   margin-top: 10px;
 }
+.featured-paper .paper-links {
+  margin-top: 0;
+}
+.featured-paper .paper-links a {
+  color: inherit;
+}
 .paper-authors {
   font-size: 13px;
   color: var(--muted);

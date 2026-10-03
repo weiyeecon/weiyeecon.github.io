@@ -245,18 +245,10 @@ p {
   width: 310px;
 }
 .portrait-frame {
-  position: relative;
-  padding: 0 13px 13px 0;
-}
-.portrait-frame::after {
-  content: "";
-  position: absolute;
-  inset: 14px 0 0 14px;
   border: 1px solid #b8b3a9;
-  z-index: -1;
 }
 .portrait img {
-  width: 297px;
+  width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
@@ -691,9 +683,6 @@ p {
   .portrait {
     width: 260px;
   }
-  .portrait img {
-    width: 247px;
-  }
   .hero-bio {
     font-size: 16px;
   }
@@ -777,13 +766,6 @@ p {
   .portrait-frame {
     flex-shrink: 0;
     width: 173px;
-    padding: 0 9px 9px 0;
-  }
-  .portrait img {
-    width: 164px;
-  }
-  .portrait-frame::after {
-    inset: 9px 0 0 9px;
   }
   .portrait figcaption {
     font-size: 10px;
@@ -894,9 +876,6 @@ p {
   }
   .portrait-frame {
     width: 149px;
-  }
-  .portrait img {
-    width: 140px;
   }
   .site-nav {
     gap: 6px;

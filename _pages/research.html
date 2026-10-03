@@ -85,6 +85,13 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
           <h3>{{ jmp.title }}</h3>
           <p class="paper-authors">{{ jmp.authors }}</p>
           <p class="paper-status">{{ jmp.status }}</p>
+          {% if jmp.url %}
+          <div class="paper-links">
+            <a href="{{ jmp.url }}" target="_blank" rel="noopener noreferrer">
+              Read paper on {{ jmp.link_label }} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          {% endif %}
           <details class="abstract" open>
             <summary>Abstract</summary>
             <p>{{ jmp.abstract }}</p>

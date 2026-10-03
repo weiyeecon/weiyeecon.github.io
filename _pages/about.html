@@ -121,7 +121,14 @@ description: Wei Ye is a Ph.D. candidate in Economics at Fordham University, res
           <h2 id="jmp-title"><a href="{{ '/research/#safety-illusion' | relative_url }}">{{ jmp.title }}</a></h2>
           <p class="paper-authors">{{ jmp.authors }}</p>
           <p class="paper-status">{{ jmp.status }}</p>
-          <a class="text-link" href="{{ '/research/#safety-illusion' | relative_url }}">Read the abstract <span aria-hidden="true">→</span></a>
+          <div class="paper-links">
+            {% if jmp.url %}
+            <a class="text-link" href="{{ jmp.url }}" target="_blank" rel="noopener noreferrer">
+              Read paper on {{ jmp.link_label }} <span aria-hidden="true">↗</span>
+            </a>
+            {% endif %}
+            <a class="text-link" href="{{ '/research/#safety-illusion' | relative_url }}">Read the abstract <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </section>
       <section class="section home-grid" aria-label="Research highlights and recent activity">

@@ -3,6 +3,8 @@ module.exports = {
   css: ["_site/assets/css/*.css"],
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
+  // The visitor changes this attribute at runtime to select light or dark mode.
+  dynamicAttributes: ["data-theme"],
   safelist: [
     // Mobile navigation adds these classes after page load.
     "js",

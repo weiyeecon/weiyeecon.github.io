@@ -14,6 +14,7 @@ Personal academic website for Wei Ye, Ph.D. Candidate in Economics at Fordham Un
 - `assets/img/headshot_compress.png`: professional portrait.
 - `assets/css/academic.css`: responsive visual design.
 - `assets/js/academic.js`: accessible mobile navigation.
+- `assets/js/theme.js`: light/dark appearance toggle; remembers the visitor's choice and restores it before the stylesheet loads.
 - `analytics/`: private, self-hosted visitor statistics service and dashboard. See [setup instructions](analytics/README.md).
 
 The custom statistics collector is disabled until `self_hosted_analytics_url` in `_config.yml` points to your own deployed server. No third-party analytics service is installed.
@@ -33,6 +34,8 @@ bundle exec jekyll serve
 
 Preview at `http://localhost:4000/`. This user site serves at the domain root, so keep `baseurl` empty.
 
-The existing `Deploy site` workflow builds changes on `main` and publishes the generated site to `gh-pages`. Configure GitHub Pages to serve from the `gh-pages` branch. The stylesheet purge configuration preserves the navigation classes added by JavaScript.
+The existing `Deploy site` workflow builds changes on `main` and publishes the generated site to `gh-pages`. Configure GitHub Pages to serve from the `gh-pages` branch. The stylesheet purge configuration preserves the navigation classes and theme attribute changed by JavaScript.
+
+The header's sun/moon button switches between the original light design and dark mode on every public page, including mobile. The default is light; the visitor's explicit choice is saved in browser storage. Print styles always use the light palette.
 
 Content was updated from the October 2, 2026 academic CV. Scheduled visits and presentations are labeled as upcoming.

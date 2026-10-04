@@ -1,12 +1,37 @@
 :root {
+  color-scheme: light;
   --paper: #faf9f6;
   --ink: #172b3b;
   --muted: #58636b;
   --accent: #7a283c;
   --line: #dddeda;
   --wash: #f0f2f1;
+  --body-copy: #384854;
+  --portrait-line: #b8b3a9;
+  --button-bg: #172b3b;
+  --button-ink: #fff;
+  --button-hover-ink: #fff;
+  --featured-bg: #172b3b;
+  --selection: #e8ccd2;
   --serif: Georgia, "Times New Roman", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111d27;
+  --ink: #e6edf2;
+  --muted: #adbcc7;
+  --accent: #e8a3b5;
+  --line: #394854;
+  --wash: #1b2a36;
+  --body-copy: #c7d2db;
+  --portrait-line: #56636d;
+  --button-bg: #e6edf2;
+  --button-ink: #111d27;
+  --button-hover-ink: #111d27;
+  --featured-bg: #1e3143;
+  --selection: #653448;
 }
 
 * {
@@ -45,7 +70,8 @@ summary {
   cursor: pointer;
 }
 ::selection {
-  background: #e8ccd2;
+  background: var(--selection);
+  color: var(--ink);
 }
 [hidden] {
   display: none !important;
@@ -60,8 +86,8 @@ summary {
   left: 20px;
   z-index: 20;
   padding: 10px 18px;
-  background: var(--ink);
-  color: white;
+  background: var(--button-bg);
+  color: var(--button-ink);
 }
 .skip-link:focus {
   top: 10px;
@@ -100,9 +126,56 @@ summary {
   letter-spacing: -0.4px;
 }
 .site-nav {
+  margin-left: auto;
+  order: 2;
   display: flex;
   align-items: center;
   gap: 30px;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  order: 3;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  min-width: 81px;
+  padding: 7px 11px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.2;
+}
+.theme-toggle:hover {
+  background: var(--wash);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.theme-sun {
+  display: none;
+}
+[data-theme="dark"] .theme-moon {
+  display: none;
+}
+[data-theme="dark"] .theme-sun {
+  display: block;
 }
 .site-nav a {
   text-decoration: none;
@@ -185,7 +258,7 @@ p {
 .hero-bio {
   font-size: 17px;
   line-height: 1.8;
-  color: #384854;
+  color: var(--body-copy);
   max-width: 610px;
 }
 .hero-bio p:last-child {
@@ -204,16 +277,16 @@ p {
   justify-content: center;
   gap: 16px;
   padding: 12px 20px;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: #fff;
+  border: 1px solid var(--button-bg);
+  background: var(--button-bg);
+  color: var(--button-ink);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
 }
 .button:hover {
   background: var(--accent);
-  color: #fff;
+  color: var(--button-hover-ink);
   border-color: var(--accent);
 }
 .text-link {
@@ -237,7 +310,7 @@ p {
   width: 310px;
 }
 .portrait-frame {
-  border: 1px solid #b8b3a9;
+  border: 1px solid var(--portrait-line);
 }
 .portrait img {
   width: 100%;
@@ -274,7 +347,7 @@ p {
   border-radius: 50%;
 }
 .featured-paper {
-  background: var(--ink);
+  background: var(--featured-bg);
   color: #fff;
   padding: 34px 39px;
   display: grid;
@@ -489,7 +562,7 @@ p {
 .abstract p {
   font-size: 15px;
   line-height: 1.85;
-  color: #384854;
+  color: var(--body-copy);
   max-width: 870px;
   margin-top: 14px;
   margin-bottom: 0;
@@ -680,6 +753,9 @@ p {
   .site-nav {
     gap: 23px;
   }
+  .header-inner {
+    gap: 20px;
+  }
   .home-grid {
     gap: 38px;
   }
@@ -710,10 +786,24 @@ p {
     font-size: 21px;
   }
   .site-nav {
+    order: 3;
     width: 100%;
     justify-content: space-between;
     gap: 8px;
     margin-top: 17px;
+  }
+  .header-controls {
+    order: 2;
+    margin-left: auto;
+    gap: 8px;
+  }
+  .theme-toggle,
+  .menu-toggle {
+    min-height: 40px;
+  }
+  .theme-toggle {
+    min-width: 76px;
+    padding-inline: 9px;
   }
   .site-nav a {
     font-size: 12px;
@@ -878,6 +968,20 @@ p {
   }
 }
 @media print {
+  :root[data-theme] {
+    color-scheme: light;
+    --paper: #fff;
+    --ink: #172b3b;
+    --muted: #58636b;
+    --accent: #7a283c;
+    --line: #dddeda;
+    --wash: #f0f2f1;
+    --body-copy: #384854;
+    --portrait-line: #b8b3a9;
+    --button-bg: #172b3b;
+    --button-ink: #fff;
+    --button-hover-ink: #fff;
+  }
   body {
     background: white;
     font-size: 12px;

@@ -1,0 +1,18 @@
+{
+  "name": "wei-ye-private-analytics-worker",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "npm run test:unit && npm run test:runtime",
+    "credentials": "node credentials.mjs",
+    "test:unit": "node build.mjs && node --test test/worker.test.mjs test/dashboard.test.cjs",
+    "test:runtime": "node build.mjs && node --test test/runtime.test.mjs"
+  },
+  "devDependencies": {
+    "miniflare": "4.20260730.0"
+  }
+}

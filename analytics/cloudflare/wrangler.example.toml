@@ -1,0 +1,27 @@
+name = "twilight-morning-f73e"
+main = "dist/worker.js"
+compatibility_date = "2026-08-01"
+workers_dev = true
+
+[build]
+command = "node build.mjs"
+
+[vars]
+PUBLIC_ORIGIN = "https://twilight-morning-f73e.joinyerisktaker.workers.dev"
+SITE_ORIGINS = "https://weiyeecon.github.io"
+ANALYTICS_TIMEZONE = "America/New_York"
+MAX_EVENTS_PER_DAY = "2000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "weiye-analytics-db"
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 4 * * *"]
+
+# Secret bindings are set privately, never in this file:
+# ADMIN_PASSWORD_HASH, ANALYTICS_SECRET
+[observability]
+enabled = false

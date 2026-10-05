@@ -1,0 +1,34 @@
+name: Private analytics tests
+
+on:
+  push:
+    branches: [main]
+    paths: ["analytics/**", ".github/workflows/private-analytics.yml"]
+  pull_request:
+    paths: ["analytics/**", ".github/workflows/private-analytics.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: analytics/cloudflare/package-lock.json
+      - run: npm ci
+        working-directory: analytics/cloudflare
+      - run: npm test
+        working-directory: analytics/cloudflare
+      - name: Check committed Worker bundle
+        run: git diff --exit-code -- analytics/cloudflare/dist/worker.js
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r analytics/requirements-dev.txt
+      - run: python -m unittest discover -s analytics -p 'test_*.py' -v

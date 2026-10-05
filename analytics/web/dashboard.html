@@ -138,6 +138,42 @@
             <p class="panel-footnote">直接访问也包含未提供来源信息的访问。</p>
           </section>
         </div>
+        <section id="geography" class="geography-section" aria-labelledby="geography-heading" hidden>
+          <div class="geography-heading">
+            <div>
+              <p class="eyebrow">GEOGRAPHY / APPROXIMATE</p>
+              <h2 id="geography-heading">再近一点看访客分布</h2>
+              <p id="geography-note">地理位置按访问 IP 近似推断；州 / 城市可能缺失，不采集县（County）信息。</p>
+            </div>
+            <a id="export-geography" class="secondary-button" href="/api/export?days=30&amp;group=geography" hidden
+              ><span aria-hidden="true">↓</span>导出地理分布 CSV</a
+            >
+          </div>
+          <div class="audience-grid geography-grid">
+            <section class="panel" aria-labelledby="state-heading">
+              <div class="panel-heading">
+                <div>
+                  <h2 id="state-heading">美国访客 · 州分布</h2>
+                  <p>浏览量前 8 位 · 占美国浏览量的比例</p>
+                </div>
+                <span id="state-total" class="panel-tag">—</span>
+              </div>
+              <div id="state-list" class="ranking-list geography-list"></div>
+              <p class="panel-footnote">未提供州信息的美国访问保留为未知，不计入任何已知州。</p>
+            </section>
+            <section class="panel" aria-labelledby="city-heading">
+              <div class="panel-heading">
+                <div>
+                  <h2 id="city-heading">访客城市</h2>
+                  <p>浏览量前 8 位 · 占全部浏览量的比例</p>
+                </div>
+                <span class="panel-tag">全球城市</span>
+              </div>
+              <div id="city-list" class="ranking-list geography-list city-list"></div>
+              <p class="panel-footnote">同名城市按国家 / 地区与州区分；位置不代表访客的实际地址。</p>
+            </section>
+          </div>
+        </section>
         <section class="panel content-panel" id="content" aria-labelledby="page-heading">
           <div class="panel-heading">
             <div>
@@ -173,7 +209,7 @@
               <thead>
                 <tr>
                   <th scope="col">时间</th>
-                  <th scope="col">国家 / 地区</th>
+                  <th id="activity-location-heading" scope="col">国家 / 地区</th>
                   <th scope="col">页面 / 事件</th>
                   <th scope="col">来源</th>
                 </tr>
@@ -187,7 +223,7 @@
           <div>
             <a id="exclude-browser" href="https://weiyeecon.github.io/#stats-exclude" target="_blank" rel="noopener noreferrer"
               >忽略此浏览器的访问 ↗</a
-            ><a href="https://db-ip.com/" target="_blank" rel="noopener noreferrer">IP Geolocation by DB-IP</a>
+            ><span id="geo-credit">正在读取地理信息来源</span>
           </div>
         </footer>
       </main>

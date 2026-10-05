@@ -4,6 +4,10 @@
 
 ![后台预览（演示数据）](../docs/analytics-dashboard.png)
 
+## Cloudflare 免服务器部署
+
+已提供 [Cloudflare Workers + D1 版本](cloudflare/README.md)，可复用现有 `twilight-morning-f73e` Worker 和 `weiye-analytics-db` 数据库，支持国家、美国州和近似城市分布。先完成后端部署与登录验收，再开启主页采集。以下章节继续适用于原有 Python / SQLite 部署。
+
 ## 已实现
 
 - 管理员密码登录，12 小时会话，到期重新登录；退出后会话立即失效。
@@ -13,7 +17,7 @@
 - 本地 IP 国家数据库。没有安装数据库时，国家显示为「未知」，其他统计正常。
 - Docker Compose、HTTPS 反向代理、数据库备份和独立的本地演示环境。
 
-**当前状态：代码可运行，真实网站采集尚未开启。** GitHub Pages 是静态托管，不能运行这个服务。需要自己的服务器、统计域名和 HTTPS；这些就绪后再填写网站的接入地址。
+**当前状态：代码可运行，真实网站采集尚未开启。** GitHub Pages 是静态托管，不能运行这个服务。可以选择上面的 Cloudflare 部署；以下 Python 方案需要自己的服务器、统计域名和 HTTPS，这些就绪后再填写网站的接入地址。
 
 ## 本机预览
 

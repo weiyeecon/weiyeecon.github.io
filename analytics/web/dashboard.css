@@ -455,6 +455,31 @@ p {
   gap: 22px;
   margin-block: 22px;
 }
+.geography-section {
+  margin-block: 30px 22px;
+}
+.geography-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.geography-heading h2 {
+  margin-top: 6px;
+  font-size: 17px;
+  font-weight: 550;
+}
+.geography-heading p:not(.eyebrow) {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.geography-heading .secondary-button {
+  flex-shrink: 0;
+}
+.geography-grid {
+  margin-top: 16px;
+}
 .ranking-list {
   padding: 0 24px;
 }
@@ -514,6 +539,24 @@ p {
 .source-list .rank-fill {
   fill: #a4bab0;
 }
+.geography-row {
+  grid-template-columns: minmax(0, 1fr) 48px 48px;
+  padding-block: 12px;
+}
+.geography-name,
+.geography-context {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.geography-context {
+  margin-top: 2px;
+  font-size: 9px;
+  color: var(--muted);
+}
+.city-list .rank-fill {
+  fill: #a4bab0;
+}
 .panel-footnote {
   margin: 12px 24px 18px;
   padding-top: 10px;
@@ -561,6 +604,12 @@ td.page-cell {
   display: block;
   color: #969c96;
   font-size: 9px;
+}
+.location-cell small {
+  display: block;
+  margin-top: 2px;
+  font-size: 9px;
+  color: var(--muted);
 }
 .numeric {
   font-variant-numeric: tabular-nums;
@@ -864,6 +913,14 @@ td.page-cell {
   }
   .audience-grid {
     grid-template-columns: 1fr;
+  }
+  .geography-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .geography-section {
+    margin-top: 24px;
   }
   .panel-heading {
     padding: 18px 18px 12px;

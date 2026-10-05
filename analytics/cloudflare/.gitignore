@@ -1,0 +1,7 @@
+.dev.vars
+.dev.vars.*
+.wrangler/
+wrangler.toml
+credentials.private.txt
+node_modules/
+private-backup*.sql

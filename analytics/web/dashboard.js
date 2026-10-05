@@ -67,6 +67,68 @@ function renderRanking(id, rows, total, countries) {
   }
 }
 
+const locationValue = (value) => (typeof value === "string" ? value.trim() : "");
+const regionLabel = (name, code) => {
+  const region = locationValue(name);
+  const abbreviation = locationValue(code);
+  return region && abbreviation && region !== abbreviation ? `${region} (${abbreviation})` : region || abbreviation;
+};
+const usesCloudflare = (stats) => stats.meta.geo_source === "Cloudflare request.cf";
+const hasGeography = (stats) => usesCloudflare(stats) || Array.isArray(stats.us_states) || Array.isArray(stats.cities);
+
+function renderGeographyRanking(id, rows, total, states) {
+  const container = byId(id);
+  container.replaceChildren();
+  if (!rows.length) {
+    return empty(container, states ? "此时段暂无美国州级访问记录" : "此时段暂无城市访问记录");
+  }
+  const highest = Math.max(1, ...rows.map((row) => row.views));
+  for (const row of rows.slice(0, 8)) {
+    const name = states ? regionLabel(row.name, row.code) : locationValue(row.city);
+    const context = states ? "美国" : [countryName(row.country || "ZZ"), regionLabel(row.region, row.region_code)].filter(Boolean).join(" · ");
+    const item = element("div", "rank-row geography-row");
+    const label = element("div", "rank-name");
+    const heading = element("span", "geography-name", name || "未知（Unknown）");
+    heading.title = name || "未知（Unknown）";
+    const detail = element("small", "geography-context", context);
+    detail.title = context;
+    label.append(heading, detail, bar(row.views / highest));
+    item.append(label, element("span", "rank-count numeric", number.format(row.views)), element("span", "rank-percent", percent(row.views, total)));
+    container.append(item);
+  }
+}
+
+function renderGeography(stats) {
+  const cloudflare = usesCloudflare(stats);
+  const available = hasGeography(stats);
+  byId("geography").hidden = !available;
+  byId("export-geography").hidden = !cloudflare;
+  text("activity-location-heading", available ? "近似位置" : "国家 / 地区");
+  const credit = byId("geo-credit");
+  if (cloudflare) {
+    credit.textContent = "IP 地理位置 · Cloudflare";
+    credit.title = stats.meta.geo_source;
+  } else if (stats.meta.geo_source) {
+    credit.textContent = `IP 地理位置 · ${stats.meta.geo_source}`;
+    credit.removeAttribute("title");
+  } else {
+    const link = element("a", "", "IP Geolocation by DB-IP");
+    link.href = "https://db-ip.com/";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    credit.replaceChildren(link);
+    credit.removeAttribute("title");
+  }
+  if (!available) return;
+  byId("geography-note").title = stats.meta.geography_note || "";
+  const states = Array.isArray(stats.us_states) ? stats.us_states : [];
+  const cities = Array.isArray(stats.cities) ? stats.cities : [];
+  const usViews = stats.countries.find((row) => row.code === "US")?.views || 0;
+  text("state-total", `${number.format(usViews)} 次美国浏览`);
+  renderGeographyRanking("state-list", states, usViews, true);
+  renderGeographyRanking("city-list", cities, stats.summary.views, false);
+}
+
 function renderChart(timeline) {
   const svg = byId("trend-chart");
   const tooltip = byId("chart-tooltip");
@@ -179,14 +241,14 @@ function renderTables(stats) {
   for (const item of stats.recent) {
     const row = element("tr");
     const event = element("td");
+    const location = element("td", "location-cell", `${flag(item.country)} ${countryName(item.country)}`);
+    if (hasGeography(stats)) {
+      const detail = [locationValue(item.city), regionLabel(item.region, item.region_code)].filter(Boolean).join(" · ");
+      location.append(element("small", "", detail || "州 / 城市未知（Unknown）"));
+    }
     if (item.kind === "cv_download") event.append(element("span", "event-tag", "↓ CV 下载点击"));
     else event.textContent = pageNames[item.path] || item.path;
-    row.append(
-      element("td", "numeric", time.format(new Date(item.created_at))),
-      element("td", "", `${flag(item.country)} ${countryName(item.country)}`),
-      event,
-      element("td", "", item.referrer || "直接访问")
-    );
+    row.append(element("td", "numeric", time.format(new Date(item.created_at))), location, event, element("td", "", item.referrer || "直接访问"));
     activity.append(row);
   }
 }
@@ -194,6 +256,7 @@ function renderTables(stats) {
 async function loadStats() {
   const currentSequence = ++sequence;
   byId("refresh").disabled = true;
+  byId("export-geography").href = `/api/export?days=${days}&group=geography`;
   byId("dashboard-error").hidden = true;
   try {
     const response = await fetch(`/api/stats?days=${days}`);
@@ -225,6 +288,7 @@ async function loadStats() {
     renderChart(stats.timeline);
     renderRanking("country-list", stats.countries, total.views, true);
     renderRanking("source-list", stats.referrers, total.views, false);
+    renderGeography(stats);
     renderTables(stats);
   } catch {
     if (currentSequence !== sequence) return;

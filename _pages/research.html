@@ -194,12 +194,36 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
     </main>
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <span>© {{ 'now' | date: '%Y' }} Wei Ye · Content updated October 2, 2026</span>
-        <div class="footer-links">
-          <a href="https://scholar.google.com/citations?user=IiMFt7oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101" target="_blank" rel="noopener noreferrer">SSRN</a>
-          <a href="https://github.com/weiyeecon" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <div class="footer-copy">
+          <span>© {{ 'now' | date: '%Y' }} Wei Ye · Content updated October 2, 2026</span>
+          <div class="footer-links">
+            <a href="https://scholar.google.com/citations?user=IiMFt7oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101" target="_blank" rel="noopener noreferrer">SSRN</a>
+            <a href="https://github.com/weiyeecon" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
+        <a class="university-logo" href="https://www.fordham.edu/" aria-label="Fordham University official website">
+          <picture class="fordham-logo-light">
+            <source media="(max-width: 680px)" srcset="{{ '/assets/img/fordham-vertical-maroon.svg' | relative_url }}" />
+            <img
+              src="{{ '/assets/img/fordham-horizontal-maroon.svg' | relative_url }}"
+              alt="Fordham University"
+              width="356"
+              height="96"
+              loading="lazy"
+            />
+          </picture>
+          <picture class="fordham-logo-dark">
+            <source media="(max-width: 680px)" srcset="{{ '/assets/img/fordham-vertical-white.svg' | relative_url }}" />
+            <img
+              src="{{ '/assets/img/fordham-horizontal-white.svg' | relative_url }}"
+              alt="Fordham University"
+              width="356"
+              height="96"
+              loading="lazy"
+            />
+          </picture>
+        </a>
       </div>
     </footer>
   </body>

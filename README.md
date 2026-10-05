@@ -12,6 +12,7 @@ Personal academic website for Wei Ye, Ph.D. Candidate in Economics at Fordham Un
 - `_pages/teaching.html`: teaching and student mentoring.
 - `_pages/cv.html`: web CV; replace `assets/pdf/CV_academic.pdf` when updating the downloadable CV.
 - `assets/img/headshot_compress.png`: professional portrait.
+- `assets/img/fordham-*.svg`: official Fordham footer logos; see [source and placement notes](docs/fordham-logo.md).
 - `assets/css/academic.css`: responsive visual design.
 - `assets/js/academic.js`: accessible mobile navigation.
 - `assets/js/theme.js`: light/dark appearance toggle; remembers the visitor's choice and restores it before the stylesheet loads.

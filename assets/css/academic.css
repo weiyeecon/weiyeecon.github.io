@@ -739,6 +739,37 @@ p {
   display: flex;
   gap: 18px;
 }
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.university-logo {
+  display: block;
+  flex-shrink: 0;
+  width: 328px;
+  padding: 24px;
+  background: #fff;
+  text-decoration: none;
+}
+.university-logo picture,
+.university-logo img {
+  display: block;
+  width: 100%;
+}
+.university-logo .fordham-logo-dark {
+  display: none;
+}
+[data-theme="dark"] .university-logo {
+  background: #7e072c;
+}
+[data-theme="dark"] .university-logo .fordham-logo-light {
+  display: none;
+}
+[data-theme="dark"] .university-logo .fordham-logo-dark {
+  display: block;
+}
 .footer-links a {
   text-decoration: none;
 }
@@ -963,7 +994,14 @@ p {
   }
   .footer-inner {
     flex-wrap: wrap;
-    gap: 9px;
+    gap: 22px;
+  }
+  .footer-copy {
+    width: 100%;
+  }
+  .university-logo {
+    width: 273px;
+    margin-left: auto;
   }
 }
 @media (max-width: 360px) {

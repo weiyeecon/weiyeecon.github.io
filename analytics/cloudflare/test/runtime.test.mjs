@@ -11,7 +11,7 @@ const origin = "https://analytics.example";
 test("real workerd + D1: authenticated analytics, trusted geography, CORS and revocation", async () => {
   const mf = new Miniflare({
     modules: true,
-    scriptPath: fileURLToPath(new URL("../dist/worker.js", import.meta.url)),
+    scriptPath: fileURLToPath(new URL("../dist/private-worker.js", import.meta.url)),
     compatibilityDate: "2026-08-01",
     cf: false,
     d1Databases: ["DB"],

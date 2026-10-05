@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import worker from "../dist/worker.js";
+import worker from "../dist/private-worker.js";
 import {
   ADMIN,
   COOKIE,
@@ -74,7 +74,7 @@ test("migration is repeatable and preserves existing Python tables and data", (t
 });
 
 test("deployment bundle is self-contained and does not embed test credentials", () => {
-  const source = readFileSync(new URL("../dist/worker.js", import.meta.url), "utf8");
+  const source = readFileSync(new URL("../dist/private-worker.js", import.meta.url), "utf8");
   assert.match(source, /const ASSETS = /);
   assert.doesNotMatch(source, /^\s*import\s/m);
   for (const secret of [PASSWORD, PASSWORD_HASH, SECRET]) assert.equal(source.includes(secret), false);
@@ -259,7 +259,7 @@ test("session expiration is enforced at the exact expiry boundary", async (t) =>
 test("login throttles share atomic counters across fresh worker instances", async (t) => {
   freeze(t);
   const h = fixture(t);
-  const fresh = (await import(`../dist/worker.js?login-isolate=${crypto.randomUUID()}`)).default;
+  const fresh = (await import(`../dist/private-worker.js?login-isolate=${crypto.randomUUID()}`)).default;
   for (let i = 0; i < 5; i++) {
     assert.equal((await h.login({ password: "wrong", implementation: i % 2 ? fresh : worker })).status, 401);
   }
@@ -546,7 +546,7 @@ test("daily visitor HMAC is IP-only, changes each analytics day and remains stab
 test("distributed collection global cap uses shared atomic SQLite counters", async (t) => {
   freeze(t);
   const h = fixture(t, { MAX_EVENTS_PER_DAY: "3" });
-  const fresh = (await import(`../dist/worker.js?collect-isolate=${crypto.randomUUID()}`)).default;
+  const fresh = (await import(`../dist/private-worker.js?collect-isolate=${crypto.randomUUID()}`)).default;
   // Exercise the supported older D1 interface, with no withSession method.
   h.db.withSession = undefined;
   const responses = await Promise.all(
@@ -823,7 +823,7 @@ test("simultaneous valid logins cannot race past the per-address limit", async (
 test("simultaneous duplicate events insert one row while consuming the request quota", async (t) => {
   freeze(t);
   const h = fixture(t, { MAX_EVENTS_PER_DAY: "8" });
-  const fresh = (await import(`../dist/worker.js?dedup-isolate=${crypto.randomUUID()}`)).default;
+  const fresh = (await import(`../dist/private-worker.js?dedup-isolate=${crypto.randomUUID()}`)).default;
   const responses = await Promise.all(Array.from({ length: 8 }, (_, i) => h.collect({ id: EVENT_ID }, { implementation: i % 2 ? fresh : worker })));
   assert.equal(
     responses.every((response) => response.status === 204),

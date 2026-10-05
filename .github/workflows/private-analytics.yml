@@ -1,4 +1,4 @@
-name: Private analytics tests
+name: Analytics privacy and regression tests
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
       - run: npm test
         working-directory: analytics/cloudflare
       - name: Check committed Worker bundle
-        run: git diff --exit-code -- analytics/cloudflare/dist/worker.js
+        run: git diff --exit-code -- analytics/cloudflare/dist/
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

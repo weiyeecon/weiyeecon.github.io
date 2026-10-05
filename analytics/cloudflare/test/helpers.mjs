@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createHash, createHmac } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { DatabaseSync } from "node:sqlite";
-import worker from "../dist/worker.js";
+import worker from "../dist/private-worker.js";
 
 // These deterministic fixtures are deliberately synthetic. Never deploy them.
 export const PASSWORD = createHash("sha256").update("TEST FIXTURE ONLY: synthetic analytics password").digest("base64url");

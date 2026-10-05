@@ -232,6 +232,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - reports/
   - analytics/
   - assets/jupyter/
   - assets/rendercv/

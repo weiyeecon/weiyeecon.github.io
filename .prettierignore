@@ -8,4 +8,7 @@ _posts/2015-10-20-math.md
 _data/citations.yml
 analytics/data/**
 # Deterministic embedded asset bundle; format source files instead.
-analytics/cloudflare/dist/worker.js
+analytics/cloudflare/dist/*.js
+# Deterministic public aggregate report generated without extra npm dependencies.
+reports/traffic/summary.json
+reports/traffic/README.md

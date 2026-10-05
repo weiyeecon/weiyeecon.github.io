@@ -1,13 +1,12 @@
 name = "twilight-morning-f73e"
-main = "dist/worker.js"
+main = "dist/private-worker.js"
 compatibility_date = "2026-08-01"
 workers_dev = true
 
 [build]
-command = "node build.mjs"
+command = "node build.mjs --private"
 
 [vars]
-AGGREGATE_MODE = "true"
 PUBLIC_ORIGIN = "https://twilight-morning-f73e.joinyerisktaker.workers.dev"
 SITE_ORIGINS = "https://weiyeecon.github.io"
 ANALYTICS_TIMEZONE = "America/New_York"
@@ -22,6 +21,7 @@ migrations_dir = "migrations"
 [triggers]
 crons = ["17 4 * * *"]
 
-# The default aggregate-only Worker requires NO passwords, tokens, or secrets.
+# Secret bindings are set privately, never in this file:
+# ADMIN_PASSWORD_HASH, ANALYTICS_SECRET
 [observability]
 enabled = false

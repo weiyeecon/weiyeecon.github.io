@@ -6,7 +6,7 @@
 
 ## Cloudflare 免服务器部署
 
-已提供 [Cloudflare Workers + D1 版本](cloudflare/README.md)，可复用现有 `twilight-morning-f73e` Worker 和 `weiye-analytics-db` 数据库，支持国家、美国州和近似城市分布。先完成后端部署与登录验收，再开启主页采集。以下章节继续适用于原有 Python / SQLite 部署。
+默认采用 [Cloudflare Workers + D1 无密码汇总版](cloudflare/README.md)：只在公开 GitHub 仓库查看每日 / 每小时浏览量和经过门槛筛选的国家、美国州、近似城市汇总，不保存逐条事件或访客标识。先完成后端和报表验收，再开启主页采集。以下章节仅适用于原有 Python / SQLite 私密后台方案。
 
 ## 已实现
 

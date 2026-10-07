@@ -2,18 +2,14 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-10-06T21",
+  "as_of_hour": "2026-10-07T04",
   "period": {
-    "start": "2026-09-07",
-    "end": "2026-10-06"
+    "start": "2026-09-08",
+    "end": "2026-10-07"
   },
   "metric": "pageviews",
   "total_pageviews": 20,
   "daily": [
-    {
-      "day": "2026-09-07",
-      "pageviews": 0
-    },
     {
       "day": "2026-09-08",
       "pageviews": 0
@@ -129,129 +125,13 @@
     {
       "day": "2026-10-06",
       "pageviews": 18
+    },
+    {
+      "day": "2026-10-07",
+      "pageviews": 0
     }
   ],
   "hourly": [
-    {
-      "day": "2026-09-30",
-      "hour": 0,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 1,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 2,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 3,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 4,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 5,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 6,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 7,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 8,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 9,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 10,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 11,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 12,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 13,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 14,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 15,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 16,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 17,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 18,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 19,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 20,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 21,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 22,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-09-30",
-      "hour": 23,
-      "pageviews": 0
-    },
     {
       "day": "2026-10-01",
       "hour": 0,
@@ -956,17 +836,71 @@
       "day": "2026-10-06",
       "hour": 20,
       "pageviews": 0
+    },
+    {
+      "day": "2026-10-06",
+      "hour": 21,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-06",
+      "hour": 22,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-06",
+      "hour": 23,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-07",
+      "hour": 0,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-07",
+      "hour": 1,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-07",
+      "hour": 2,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-07",
+      "hour": 3,
+      "pageviews": 0
     }
   ],
   "geography": {
     "period": {
-      "start": "2026-09-06",
-      "end": "2026-10-05"
+      "start": "2026-09-07",
+      "end": "2026-10-06"
     },
     "minimum_count": 5,
     "rounding": 5,
-    "countries": [],
-    "us_states": [],
-    "cities": []
+    "countries": [
+      {
+        "country": "US",
+        "pageviews": 20
+      }
+    ],
+    "us_states": [
+      {
+        "region_code": "NY",
+        "region": "New York",
+        "pageviews": 15
+      }
+    ],
+    "cities": [
+      {
+        "country": "US",
+        "region_code": "NY",
+        "region": "New York",
+        "city": "New York City",
+        "pageviews": 15
+      }
+    ]
   }
 }

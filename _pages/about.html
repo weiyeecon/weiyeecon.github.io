@@ -152,6 +152,14 @@ description: Wei Ye is a Ph.D. candidate in Economics at Fordham University, res
           <article class="compact-paper">
             <h3><a href="{{ '/research/' | relative_url }}#{{ paper.id }}">{{ paper.title }}</a></h3>
             <p class="paper-status">{{ paper.status }}</p>
+            {% if paper.pdf %}
+            <div class="paper-links">
+              {% if paper.url %}
+              <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.link_label }} <span aria-hidden="true">↗</span></a>
+              {% endif %}
+              <a href="{{ paper.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF <span aria-hidden="true">↗</span></a>
+            </div>
+            {% endif %}
           </article>
           {% endif %} {% endfor %}
         </div>

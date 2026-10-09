@@ -117,9 +117,13 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
           <h3>{{ paper.title }}</h3>
           <p class="paper-authors">{{ paper.authors }}</p>
           <p class="paper-status">{{ paper.status }}</p>
-          {% if paper.url %}
+          {% if paper.url or paper.pdf %}
           <div class="paper-links">
+            {% if paper.url %}
             <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.link_label }} <span aria-hidden="true">↗</span></a>
+            {% endif %}{% if paper.pdf %}
+            <a href="{{ paper.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF <span aria-hidden="true">↗</span></a>
+            {% endif %}
           </div>
           {% endif %}
         </article>

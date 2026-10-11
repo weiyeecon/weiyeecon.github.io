@@ -2,18 +2,14 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-10-10T22",
+  "as_of_hour": "2026-10-11T05",
   "period": {
-    "start": "2026-09-11",
-    "end": "2026-10-10"
+    "start": "2026-09-12",
+    "end": "2026-10-11"
   },
   "metric": "pageviews",
   "total_pageviews": 72,
   "daily": [
-    {
-      "day": "2026-09-11",
-      "pageviews": 0
-    },
     {
       "day": "2026-09-12",
       "pageviews": 0
@@ -129,129 +125,13 @@
     {
       "day": "2026-10-10",
       "pageviews": 3
+    },
+    {
+      "day": "2026-10-11",
+      "pageviews": 0
     }
   ],
   "hourly": [
-    {
-      "day": "2026-10-04",
-      "hour": 0,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 1,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 2,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 3,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 4,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 5,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 6,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 7,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 8,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 9,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 10,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 11,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 12,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 13,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 14,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 15,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 16,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 17,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 18,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 19,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 20,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 21,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 22,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-04",
-      "hour": 23,
-      "pageviews": 0
-    },
     {
       "day": "2026-10-05",
       "hour": 0,
@@ -961,19 +841,54 @@
       "day": "2026-10-10",
       "hour": 21,
       "pageviews": 0
+    },
+    {
+      "day": "2026-10-10",
+      "hour": 22,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-10",
+      "hour": 23,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-11",
+      "hour": 0,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-11",
+      "hour": 1,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-11",
+      "hour": 2,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-11",
+      "hour": 3,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-11",
+      "hour": 4,
+      "pageviews": 0
     }
   ],
   "geography": {
     "period": {
-      "start": "2026-09-10",
-      "end": "2026-10-09"
+      "start": "2026-09-11",
+      "end": "2026-10-10"
     },
     "minimum_count": 5,
     "rounding": 5,
     "countries": [
       {
         "country": "US",
-        "pageviews": 65
+        "pageviews": 70
       }
     ],
     "us_states": [

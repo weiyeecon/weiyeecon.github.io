@@ -50,6 +50,18 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
     <script defer src="{{ '/assets/js/visitor-stats.js' | relative_url }}"></script>
   </head>
   <body>
+    {% capture rengifo_link %}<a
+      href="https://www.fordham.edu/academics/departments/economics/faculty/erick-w-rengifo/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Erick W. Rengifo</a
+    >{% endcapture %} {% capture xu_link %}<a href="https://horatioxu1122.github.io/classic/" target="_blank" rel="noopener noreferrer">Jingyan Xu</a
+    >{% endcapture %} {% capture hsu_link %}<a
+      href="https://www.fordham.edu/academics/departments/computer-and-information-science/faculty-and-administration/frank-hsu/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >D. Frank Hsu</a
+    >{% endcapture %}
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="wrap header-inner">
@@ -94,7 +106,10 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
         {% assign jmp = site.data.research | where: 'category', 'jmp' | first %}
         <article class="paper jmp" id="{{ jmp.id }}">
           <h3>{{ jmp.title }}</h3>
-          <p class="paper-authors">{{ jmp.authors }}</p>
+          <p class="paper-authors">
+            {{ jmp.authors | escape | replace: 'Erick W. Rengifo', rengifo_link | replace: 'Jingyan Xu', xu_link | replace: 'D. Frank Hsu', hsu_link
+            }}
+          </p>
           <p class="paper-status">{{ jmp.status }}</p>
           {% if jmp.url %}
           <div class="paper-links">
@@ -115,7 +130,10 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
 
         <article class="paper" id="{{ paper.id }}">
           <h3>{{ paper.title }}</h3>
-          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-authors">
+            {{ paper.authors | escape | replace: 'Erick W. Rengifo', rengifo_link | replace: 'Jingyan Xu', xu_link | replace: 'D. Frank Hsu', hsu_link
+            }}
+          </p>
           <p class="paper-status">{{ paper.status }}</p>
           {% if paper.url or paper.pdf %}
           <div class="paper-links">
@@ -135,7 +153,10 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
 
           <article class="paper" id="{{ paper.id }}">
             <h3>{{ paper.title }}</h3>
-            <p class="paper-authors">{{ paper.authors }}</p>
+            <p class="paper-authors">
+              {{ paper.authors | escape | replace: 'Erick W. Rengifo', rengifo_link | replace: 'Jingyan Xu', xu_link | replace: 'D. Frank Hsu',
+              hsu_link }}
+            </p>
             <p class="paper-status">{{ paper.status }}</p>
             {% if paper.url %}
             <div class="paper-links">
@@ -153,7 +174,10 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
 
         <article class="paper" id="{{ paper.id }}">
           <h3>{{ paper.title }}</h3>
-          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-authors">
+            {{ paper.authors | escape | replace: 'Erick W. Rengifo', rengifo_link | replace: 'Jingyan Xu', xu_link | replace: 'D. Frank Hsu', hsu_link
+            }}
+          </p>
           <p class="paper-status">{{ paper.status }}</p>
           {% if paper.url %}
           <div class="paper-links">
@@ -170,7 +194,10 @@ description: Research by Wei Ye on stablecoin trust banks, tokenized real-world 
 
         <article class="paper" id="{{ paper.id }}">
           <h3>{{ paper.title }}</h3>
-          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-authors">
+            {{ paper.authors | escape | replace: 'Erick W. Rengifo', rengifo_link | replace: 'Jingyan Xu', xu_link | replace: 'D. Frank Hsu', hsu_link
+            }}
+          </p>
           <p class="paper-status">{{ paper.status }}</p>
           {% if paper.url %}
           <div class="paper-links">

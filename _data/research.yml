@@ -30,6 +30,11 @@
   title: Atomic Settlement and Coordination Fragility
   authors: Wei Ye and Erick W. Rengifo
   status: Revise and Resubmit · Finance Research Letters
+- id: bank-charters
+  category: working
+  title: "Who Gets to Be a Bank? Digital Money, Regulatory Design, and the Remaking of Banking: Evidence from the United States, Hong Kong, and Singapore"
+  authors: Wei Ye, Jingyan Xu, and Erick W. Rengifo
+  status: Draft coming soon
 - id: cbdc-architecture
   category: working
   title: Designing Retail and Wholesale CBDC Architectures for Cross-Border Payments
@@ -72,11 +77,6 @@
     Markets"
   authors: Wei Ye and Erick W. Rengifo
   status: Work in progress
-- id: bank-charters
-  category: progress
-  title: Who Gets to Be a Bank? Digital Money, Regulatory Design, and the Remaking of Banking
-  authors: Wei Ye and Erick W. Rengifo
-  status: Work in progress · Law paper
 - id: consortium-governance
   category: progress
   title: "From Wildcat to Clearinghouse: Neutral Governance in Stablecoin Consortia"

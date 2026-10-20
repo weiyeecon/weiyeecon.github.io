@@ -148,7 +148,8 @@ description: Wei Ye is a Ph.D. candidate in Economics at Fordham University, res
             <h2>Selected research</h2>
             <a class="text-link" href="{{ '/research/' | relative_url }}">All papers <span aria-hidden="true">→</span></a>
           </div>
-          {% for paper in site.data.research %} {% if paper.id == 'tokenized-rwa' or paper.id == 'atomic-settlement' or paper.id == 'balance-sheet' %}
+          {% for paper in site.data.research %} {% if paper.id == 'tokenized-rwa' or paper.id == 'atomic-settlement' or paper.id == 'balance-sheet' or
+          paper.id == 'bank-charters' %}
           <article class="compact-paper">
             <h3><a href="{{ '/research/' | relative_url }}#{{ paper.id }}">{{ paper.title }}</a></h3>
             <p class="paper-status">{{ paper.status }}</p>
@@ -224,7 +225,7 @@ description: Wei Ye is a Ph.D. candidate in Economics at Fordham University, res
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <div class="footer-copy">
-          <span>© {{ 'now' | date: '%Y' }} Wei Ye · Content updated October 18, 2026</span>
+          <span>© {{ 'now' | date: '%Y' }} Wei Ye · Content updated October 19, 2026</span>
           <div class="footer-links">
             <a href="https://scholar.google.com/citations?user=IiMFt7oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
             <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4797101" target="_blank" rel="noopener noreferrer">SSRN</a>

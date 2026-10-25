@@ -66,6 +66,11 @@
   status: 2025 Artificial Intelligence for Business (AIxB)
   url: https://ieeexplore.ieee.org/document/11500026
   link_label: IEEE
+- id: preemption-by-obligation
+  category: progress
+  title: "Preemption by Obligation: Prediction Markets, State Remedies, and Executed Trades"
+  authors: Wei Ye
+  status: Work in progress
 - id: layered-fragility
   category: progress
   title: "Layered Fragility: Bank Money and Composable Credit"

@@ -2,18 +2,14 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-10-29T22",
+  "as_of_hour": "2026-10-30T04",
   "period": {
-    "start": "2026-09-30",
-    "end": "2026-10-29"
+    "start": "2026-10-01",
+    "end": "2026-10-30"
   },
   "metric": "pageviews",
-  "total_pageviews": 249,
+  "total_pageviews": 250,
   "daily": [
-    {
-      "day": "2026-09-30",
-      "pageviews": 0
-    },
     {
       "day": "2026-10-01",
       "pageviews": 0
@@ -129,129 +125,13 @@
     {
       "day": "2026-10-29",
       "pageviews": 16
+    },
+    {
+      "day": "2026-10-30",
+      "pageviews": 1
     }
   ],
   "hourly": [
-    {
-      "day": "2026-10-23",
-      "hour": 0,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 1,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 2,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 3,
-      "pageviews": 3
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 4,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 5,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 6,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 7,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 8,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 9,
-      "pageviews": 2
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 10,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 11,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 12,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 13,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 14,
-      "pageviews": 5
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 15,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 16,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 17,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 18,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 19,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 20,
-      "pageviews": 1
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 21,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 22,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-23",
-      "hour": 23,
-      "pageviews": 0
-    },
     {
       "day": "2026-10-24",
       "hour": 0,
@@ -961,26 +841,56 @@
       "day": "2026-10-29",
       "hour": 21,
       "pageviews": 0
+    },
+    {
+      "day": "2026-10-29",
+      "hour": 22,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-29",
+      "hour": 23,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-30",
+      "hour": 0,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-10-30",
+      "hour": 1,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-30",
+      "hour": 2,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-10-30",
+      "hour": 3,
+      "pageviews": 0
     }
   ],
   "geography": {
     "period": {
-      "start": "2026-09-29",
-      "end": "2026-10-28"
+      "start": "2026-09-30",
+      "end": "2026-10-29"
     },
     "minimum_count": 5,
     "rounding": 5,
     "countries": [
       {
         "country": "US",
-        "pageviews": 220
+        "pageviews": 235
       }
     ],
     "us_states": [
       {
         "region_code": "NY",
         "region": "New York",
-        "pageviews": 190
+        "pageviews": 200
       },
       {
         "region_code": "VA",
@@ -994,7 +904,7 @@
         "region_code": "NY",
         "region": "New York",
         "city": "New York City",
-        "pageviews": 185
+        "pageviews": 195
       },
       {
         "country": "US",

@@ -2,18 +2,14 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-11-03T18",
+  "as_of_hour": "2026-11-04T01",
   "period": {
-    "start": "2026-10-05",
-    "end": "2026-11-03"
+    "start": "2026-10-06",
+    "end": "2026-11-04"
   },
   "metric": "pageviews",
   "total_pageviews": 292,
   "daily": [
-    {
-      "day": "2026-10-05",
-      "pageviews": 2
-    },
     {
       "day": "2026-10-06",
       "pageviews": 18
@@ -128,130 +124,14 @@
     },
     {
       "day": "2026-11-03",
-      "pageviews": 4
+      "pageviews": 6
+    },
+    {
+      "day": "2026-11-04",
+      "pageviews": 0
     }
   ],
   "hourly": [
-    {
-      "day": "2026-10-28",
-      "hour": 0,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 1,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 2,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 3,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 4,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 5,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 6,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 7,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 8,
-      "pageviews": 1
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 9,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 10,
-      "pageviews": 2
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 11,
-      "pageviews": 1
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 12,
-      "pageviews": 3
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 13,
-      "pageviews": 2
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 14,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 15,
-      "pageviews": 2
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 16,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 17,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 18,
-      "pageviews": 2
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 19,
-      "pageviews": 1
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 20,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 21,
-      "pageviews": 1
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 22,
-      "pageviews": 8
-    },
-    {
-      "day": "2026-10-28",
-      "hour": 23,
-      "pageviews": 4
-    },
     {
       "day": "2026-10-29",
       "hour": 0,
@@ -941,26 +821,61 @@
       "day": "2026-11-03",
       "hour": 17,
       "pageviews": 2
+    },
+    {
+      "day": "2026-11-03",
+      "hour": 18,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-11-03",
+      "hour": 19,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-03",
+      "hour": 20,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-11-03",
+      "hour": 21,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-03",
+      "hour": 22,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-03",
+      "hour": 23,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-04",
+      "hour": 0,
+      "pageviews": 0
     }
   ],
   "geography": {
     "period": {
-      "start": "2026-10-04",
-      "end": "2026-11-02"
+      "start": "2026-10-05",
+      "end": "2026-11-03"
     },
     "minimum_count": 5,
     "rounding": 5,
     "countries": [
       {
         "country": "US",
-        "pageviews": 275
+        "pageviews": 280
       }
     ],
     "us_states": [
       {
         "region_code": "NY",
         "region": "New York",
-        "pageviews": 225
+        "pageviews": 230
       },
       {
         "region_code": "NJ",
@@ -979,7 +894,7 @@
         "region_code": "NY",
         "region": "New York",
         "city": "New York City",
-        "pageviews": 215
+        "pageviews": 220
       },
       {
         "country": "US",

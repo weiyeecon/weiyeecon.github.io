@@ -2,18 +2,14 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-11-10T20",
+  "as_of_hour": "2026-11-11T02",
   "period": {
-    "start": "2026-10-12",
-    "end": "2026-11-10"
+    "start": "2026-10-13",
+    "end": "2026-11-11"
   },
   "metric": "pageviews",
-  "total_pageviews": 258,
+  "total_pageviews": 252,
   "daily": [
-    {
-      "day": "2026-10-12",
-      "pageviews": 8
-    },
     {
       "day": "2026-10-13",
       "pageviews": 2
@@ -128,130 +124,14 @@
     },
     {
       "day": "2026-11-10",
-      "pageviews": 17
+      "pageviews": 19
+    },
+    {
+      "day": "2026-11-11",
+      "pageviews": 0
     }
   ],
   "hourly": [
-    {
-      "day": "2026-11-04",
-      "hour": 0,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 1,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 2,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 3,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 4,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 5,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 6,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 7,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 8,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 9,
-      "pageviews": 2
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 10,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 11,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 12,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 13,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 14,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 15,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 16,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 17,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 18,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 19,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 20,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 21,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 22,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-04",
-      "hour": 23,
-      "pageviews": 0
-    },
     {
       "day": "2026-11-05",
       "hour": 0,
@@ -951,26 +831,56 @@
       "day": "2026-11-10",
       "hour": 19,
       "pageviews": 0
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 20,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 21,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 22,
+      "pageviews": 2
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 23,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-11",
+      "hour": 0,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-11",
+      "hour": 1,
+      "pageviews": 0
     }
   ],
   "geography": {
     "period": {
-      "start": "2026-10-11",
-      "end": "2026-11-09"
+      "start": "2026-10-12",
+      "end": "2026-11-10"
     },
     "minimum_count": 5,
     "rounding": 5,
     "countries": [
       {
         "country": "US",
-        "pageviews": 225
+        "pageviews": 240
       }
     ],
     "us_states": [
       {
         "region_code": "NY",
         "region": "New York",
-        "pageviews": 180
+        "pageviews": 190
       },
       {
         "region_code": "NJ",
@@ -1010,6 +920,13 @@
         "region_code": "NY",
         "region": "New York",
         "city": "Larchmont",
+        "pageviews": 5
+      },
+      {
+        "country": "US",
+        "region_code": "NY",
+        "region": "New York",
+        "city": "New Rochelle",
         "pageviews": 5
       }
     ]

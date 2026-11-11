@@ -2,13 +2,13 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-11-10T15",
+  "as_of_hour": "2026-11-10T20",
   "period": {
     "start": "2026-10-12",
     "end": "2026-11-10"
   },
   "metric": "pageviews",
-  "total_pageviews": 252,
+  "total_pageviews": 258,
   "daily": [
     {
       "day": "2026-10-12",
@@ -128,7 +128,7 @@
     },
     {
       "day": "2026-11-10",
-      "pageviews": 11
+      "pageviews": 17
     }
   ],
   "hourly": [
@@ -925,6 +925,31 @@
     {
       "day": "2026-11-10",
       "hour": 14,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 15,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 16,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 17,
+      "pageviews": 4
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 18,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-11-10",
+      "hour": 19,
       "pageviews": 0
     }
   ],

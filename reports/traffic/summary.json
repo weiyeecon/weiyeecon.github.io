@@ -2,18 +2,14 @@
   "schema_version": 1,
   "mode": "public_aggregate",
   "timezone": "America/New_York",
-  "as_of_hour": "2026-11-13T18",
+  "as_of_hour": "2026-11-14T01",
   "period": {
-    "start": "2026-10-15",
-    "end": "2026-11-13"
+    "start": "2026-10-16",
+    "end": "2026-11-14"
   },
   "metric": "pageviews",
-  "total_pageviews": 254,
+  "total_pageviews": 257,
   "daily": [
-    {
-      "day": "2026-10-15",
-      "pageviews": 1
-    },
     {
       "day": "2026-10-16",
       "pageviews": 1
@@ -128,130 +124,14 @@
     },
     {
       "day": "2026-11-13",
-      "pageviews": 1
+      "pageviews": 5
+    },
+    {
+      "day": "2026-11-14",
+      "pageviews": 0
     }
   ],
   "hourly": [
-    {
-      "day": "2026-11-07",
-      "hour": 0,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 1,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 2,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 3,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 4,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 5,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 6,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 7,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 8,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 9,
-      "pageviews": 1
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 10,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 11,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 12,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 13,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 14,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 15,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 16,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 17,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 18,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 19,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 20,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 21,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 22,
-      "pageviews": 0
-    },
-    {
-      "day": "2026-11-07",
-      "hour": 23,
-      "pageviews": 0
-    },
     {
       "day": "2026-11-08",
       "hour": 0,
@@ -941,19 +821,54 @@
       "day": "2026-11-13",
       "hour": 17,
       "pageviews": 0
+    },
+    {
+      "day": "2026-11-13",
+      "hour": 18,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-13",
+      "hour": 19,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-11-13",
+      "hour": 20,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-13",
+      "hour": 21,
+      "pageviews": 1
+    },
+    {
+      "day": "2026-11-13",
+      "hour": 22,
+      "pageviews": 2
+    },
+    {
+      "day": "2026-11-13",
+      "hour": 23,
+      "pageviews": 0
+    },
+    {
+      "day": "2026-11-14",
+      "hour": 0,
+      "pageviews": 0
     }
   ],
   "geography": {
     "period": {
-      "start": "2026-10-14",
-      "end": "2026-11-12"
+      "start": "2026-10-15",
+      "end": "2026-11-13"
     },
     "minimum_count": 5,
     "rounding": 5,
     "countries": [
       {
         "country": "US",
-        "pageviews": 235
+        "pageviews": 240
       },
       {
         "country": "SG",
@@ -964,7 +879,7 @@
       {
         "region_code": "NY",
         "region": "New York",
-        "pageviews": 185
+        "pageviews": 190
       },
       {
         "region_code": "NJ",
@@ -975,6 +890,11 @@
         "region_code": "VA",
         "region": "Virginia",
         "pageviews": 10
+      },
+      {
+        "region_code": "IA",
+        "region": "Iowa",
+        "pageviews": 5
       }
     ],
     "cities": [
@@ -983,7 +903,7 @@
         "region_code": "NY",
         "region": "New York",
         "city": "New York City",
-        "pageviews": 170
+        "pageviews": 175
       },
       {
         "country": "US",
@@ -993,17 +913,17 @@
         "pageviews": 10
       },
       {
-        "country": "US",
-        "region_code": "VA",
-        "region": "Virginia",
-        "city": "Ashburn",
-        "pageviews": 10
-      },
-      {
         "country": "SG",
         "region_code": "",
         "region": "",
         "city": "Singapore",
+        "pageviews": 5
+      },
+      {
+        "country": "US",
+        "region_code": "IA",
+        "region": "Iowa",
+        "city": "Council Bluffs",
         "pageviews": 5
       },
       {
@@ -1018,6 +938,13 @@
         "region_code": "NY",
         "region": "New York",
         "city": "New Rochelle",
+        "pageviews": 5
+      },
+      {
+        "country": "US",
+        "region_code": "VA",
+        "region": "Virginia",
+        "city": "Ashburn",
         "pageviews": 5
       }
     ]
